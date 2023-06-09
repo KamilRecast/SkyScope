@@ -1,0 +1,33 @@
+@media only screen and (max-width: 1200px) {
+  .map {
+    display: none;
+  }
+  .forecast-days {
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+  }
+  .location-date h1 {
+    font-size: 1em;
+  }
+  .container {
+    width: 100%;
+  }
+  .full-container {
+    width: 100%;
+  }
+  .half-container {
+    flex-basis: calc(50% - 1.7%);
+  }
+  .location-image img {
+    border-bottom-right-radius: 25px;
+    border-top-left-radius: 25px;
+  }
+  .search-input:focus {
+    width: 150px;
+  }
+  .bookmark-modal {
+    width: 90%;
+    left: 5%;
+  }
+}
