@@ -7,7 +7,7 @@
   width: 60%;
   padding: 5%;
 }
-@media (width < 1200px) {
+@media (max-width: 1200px) {
   .forecast-days {
     justify-content: center;
     width: 100%;
@@ -32,7 +32,7 @@
 
   border: 2px solid #010c80;
 }
-@media (width < 1200px) {
+@media (max-width: 1200px) {
   .map {
     display: none;
   }
