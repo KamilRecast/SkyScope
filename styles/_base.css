@@ -42,7 +42,7 @@ body {
 .half-container h3 {
   color: #010c80;
 }
-@media screen and (max-width: 1200px) {
+@media only screen{
   .half-container {
     flex-basis: calc(50% - 1.7%);
   }
