@@ -90,7 +90,7 @@ body {
     transform: rotate(1turn);
   }
 }
-@media (max-width: 1400px) {
+@media only screen {
    .map {
     display: none;
   }
