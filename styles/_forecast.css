@@ -7,6 +7,13 @@
   width: 60%;
   padding: 5%;
 }
+@media (width < 1200px) {
+  .forecast-days {
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+  }
+}
 .forecast p {
   font-size: 24px;
   margin-block-start: 0em;
@@ -24,6 +31,11 @@
   width: 40%;
 
   border: 2px solid #010c80;
+}
+@media (width < 1200px) {
+  .map {
+    display: none;
+  }
 }
 .temperature-bar {
   margin-left: 5px;
