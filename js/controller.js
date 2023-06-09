@@ -64,8 +64,7 @@ const controlBookmark = () => {
   bookmarksView.closeModals();
 };
 const init = async function () {
-  const screenWidthElement = document.getElementById('screen-width');
-screenWidthElement.textContent = `Szerokość ekranu: ${window.innerWidth}px`;
+
   await model.getPosition();
   console.log("START");
 
