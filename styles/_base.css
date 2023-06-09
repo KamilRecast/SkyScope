@@ -22,7 +22,7 @@ body {
   opacity: 0.9;
   flex-wrap: wrap;
 }
-@media screen and (max-device-width: 1200px)
+@media screen and (max-device-width: 1200px){
   .container {
     width: 100%;
   }
