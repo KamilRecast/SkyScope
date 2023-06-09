@@ -39,7 +39,7 @@
 
   outline: none;
 }
-@media (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
   .search-input:focus {
     width: 150px;
   }

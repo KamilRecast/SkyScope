@@ -22,7 +22,7 @@ body {
   opacity: 0.9;
   flex-wrap: wrap;
 }
-@media (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
   .container {
     width: 100%;
   }
@@ -42,7 +42,7 @@ body {
 .half-container h3 {
   color: #010c80;
 }
-@media (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
   .half-container {
     flex-basis: calc(50% - 1.7%);
   }
@@ -59,7 +59,7 @@ body {
   justify-content: center;
   column-gap: 2%;
 }
-@media (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
   .full-container {
     width: 100%;
   }
