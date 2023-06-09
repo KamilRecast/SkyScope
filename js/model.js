@@ -1,5 +1,5 @@
 import { API_CALL } from "./config.js";
-
+const defaultCoords = "51.509865, -0.118092";
 export const weekDays = [
   "Sunday",
   "Monday",
@@ -215,7 +215,7 @@ const userLocation = async (position) => {
 };
 
 const blockedLocation = async () => {
-  console.log("error");
+  await updateWeather(defaultCoords);
 };
 
 export const getPosition = () => {
