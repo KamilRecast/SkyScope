@@ -1,0 +1,135 @@
+body {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: linear-gradient(to left, #87cefa, #ffffff);
+  font-family: "Unica One Regular";
+  overflow-y: auto;
+}
+@font-face {
+  font-family: "Unica One Regular";
+  src: url("./scyscope-unica-one-regular.ttf") format("woff");
+}
+.container {
+  left: 25%;
+  margin-bottom: 20px;
+  width: 50%;
+  position: sticky;
+  overflow: hidden;
+  background-color: #d5edff;
+  border-radius: 25px;
+  box-shadow: 10px 10px 100px rgba(0, 0, 0, 2);
+  opacity: 0.9;
+  flex-wrap: wrap;
+}
+
+.half-container {
+  margin-bottom: 10px;
+
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 2);
+  background-color: #d5edff;
+  border-radius: 25px;
+
+  flex-basis: calc(16.7% - 1.7%);
+}
+.full-container {
+  opacity: 0.7;
+
+  margin-bottom: 20px;
+  position: sticky;
+  width: 50%;
+  left: 25%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 2%;
+}
+
+.half-container h1 {
+  font-weight: 400;
+}
+.half-container h3 {
+  color: #010c80;
+}
+.highlight {
+  background-color: #77d4fc;
+}
+
+.spinner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f9fb;
+  transition: opacity 0.75s, visibility 0.75s;
+}
+.spinner-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.spinner::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 10px solid #dddddd;
+  border-top-color: #77d4fc;
+  border-radius: 50%;
+  animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    width: 100%;
+  }
+  .full-container {
+    width: 100%;
+  }
+  .half-container {
+    flex-basis: calc(50% - 1.7%);
+  }
+
+  .location-image img {
+    border-bottom-right-radius: 25px;
+    border-top-left-radius: 25px;
+  }
+
+  .search-input:focus {
+    width: 150px;
+  }
+  .bookmark-modal {
+    width: 90%;
+    left: 5%;
+  }
+}
+@media (max-width: 1200px) {
+  .map {
+    display: none;
+  }
+  .forecast-days {
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+  }
+  .location-date h1 {
+    font-size: 1em;
+  }
+}
+@media (max-width: 1400px) {
+  .half-container {
+    flex-basis: calc(50% - 1.7%);
+  }
+}

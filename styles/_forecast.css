@@ -1,0 +1,45 @@
+.forecast {
+  display: flex;
+  opacity: 0.7;
+}
+
+.forecast-days {
+  width: 60%;
+  padding: 5%;
+}
+.forecast p {
+  font-size: 24px;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  text-align: left;
+}
+
+.forecast-day {
+  display: flex;
+  margin: 7.5% 0% 0% 0%;
+}
+.map {
+  margin: 7.5% 0% 5% 5%;
+
+  width: 40%;
+
+  border: 2px solid #010c80;
+}
+.temperature-bar {
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 10px;
+  height: 20px;
+  background: linear-gradient(to right, #87cefa, #ffd700);
+}
+.forecast-day-container {
+  width: 80%;
+  margin: auto;
+}
+
+.forecast-day-temperature {
+  display: flex;
+  align-items: center;
+}

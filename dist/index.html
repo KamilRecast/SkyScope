@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyScope</title>
+    <link rel="shortcut icon" type="image/png" href="/favicon.c1b29cd4.png">
+    <script src="https://kit.fontawesome.com/3f3077bd91.js" crossorigin="anonymous"></script>
+    <script defer="" src="/index.850bd9e5.js"></script>
+
+    <link rel="stylesheet" href="/index.46bdac96.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="">
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+  </head>
+  <body>
+    <div class="app">
+      <div class="spinner"></div>
+      <div class="container">
+        <div class="nav">
+          <div class="nav-logo-container">
+            <div class="nav-logo"></div>
+          </div>
+          <div class="search-container">
+            <form class="search-form" id="search-form">
+              <div class="search-input-wrapper">
+                <input type="text" class="search-input" placeholder="Search">
+                <i class="fa-solid fa-magnifying-glass fa-2x search-icon"></i>
+              </div>
+              <i class="fa-regular fa-bookmark fa-2xl bookmark"></i>
+            </form>
+          </div>
+        </div>
+        <div class="search-results-container">
+          <div class="search-results" id="search-results"></div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="location-container">
+          <div class="location-results" id="location-results">
+            <div class="location-image" id="location-image"></div>
+            <div class="location-name" id="location-name"></div>
+            <div class="location-date" id="location-date"></div>
+          </div>
+        </div>
+      </div>
+      <div class="full-container" id="conditions-top"></div>
+
+      <div class="container">
+        <div class="hourly-forecast-container" id="hourly-forecast"></div>
+      </div>
+      <div class="full-container" id="conditions-bottom"></div>
+
+      <div class="container">
+        <div class="forecast">
+          <div class="map" id="mapContainer"></div>
+          <div class="forecast-days" id="forecast-days"></div>
+        </div>
+      </div>
+    </div>
+    <div class="bookmark-modal"></div>
+  </body>
+</html>

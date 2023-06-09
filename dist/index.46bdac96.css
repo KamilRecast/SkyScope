@@ -1,0 +1,384 @@
+.bookmark-modal {
+  background-color: #87cefa;
+  border-radius: 25px;
+  width: 45%;
+  position: absolute;
+  top: 85px;
+  left: 27.5%;
+}
+
+.bookmark-result {
+  text-align: left;
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+}
+
+.bookmark-container {
+  display: flex;
+}
+
+.bookmark-container:hover {
+  background-color: #d5edff;
+  border-radius: 25px;
+}
+
+.bookmark-result h1 {
+  margin-left: 30px;
+  color: #010c80;
+  margin-block: 0;
+  font-size: 20px;
+}
+
+.bookmark-result h2 {
+  margin-left: 30px;
+  margin-block-start: 0;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 100;
+}
+
+.nav {
+  grid-template-columns: 1fr 2fr;
+  height: 100px;
+  display: grid;
+}
+
+.nav-logo-container {
+  display: flex;
+}
+
+.nav-logo {
+  background-image: url("logo.b82d6c7c.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 50px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.search-form {
+  margin-right: 5%;
+  position: relative;
+  top: 20%;
+}
+
+.search-input {
+  background-color: #0000;
+  border: none;
+  width: 0;
+  height: 35px;
+  padding-right: 30px;
+  transition: width .3s ease-in-out;
+  position: absolute;
+  top: 10px;
+  right: 45px;
+}
+
+.search-input:focus {
+  border-bottom: 2px solid #010c80;
+  outline: none;
+  width: 250px;
+}
+
+.search-input::placeholder {
+  color: #010c80;
+}
+
+.search-icon {
+  color: #010c80;
+  cursor: pointer;
+  pointer-events: none;
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  transform: translate(0, -50%);
+}
+
+.bookmark {
+  color: #010c80;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 0;
+}
+
+.result-container {
+  border-top: 2px solid #77d4fc;
+  display: flex;
+}
+
+.result {
+  text-align: left;
+  width: 90%;
+  padding: 10px;
+}
+
+.result-container:hover {
+  background-color: #77d4fc;
+}
+
+.result h1 {
+  margin-left: 30px;
+  color: #010c80;
+  margin-block: 0;
+  font-size: 20px;
+}
+
+.result h2 {
+  margin-left: 30px;
+  margin-block: 0;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 100;
+}
+
+.result-bookmark button {
+  cursor: pointer;
+  background-color: #0000;
+  border: none;
+  padding: 30px;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.location-container {
+  background-color: #d5edff;
+  border-bottom-right-radius: 25px;
+  align-items: center;
+  width: 100%;
+  display: grid;
+}
+
+.location-results {
+  background-color: #77d4fc;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  display: grid;
+}
+
+.location-date {
+  border-bottom-right-radius: 25px;
+}
+
+.location-name {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: block;
+}
+
+.location-results h1 {
+  color: #010c80;
+  margin-block: 0;
+  padding: 10px;
+}
+
+.hourly-forecast-container::-webkit-scrollbar {
+  display: none;
+}
+
+.hourly-forecast-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  background-color: #87cefa;
+  display: flex;
+  overflow-x: scroll;
+}
+
+.forecast {
+  opacity: .7;
+  display: flex;
+}
+
+.forecast-days {
+  width: 60%;
+  padding: 5%;
+}
+
+.forecast p {
+  text-align: left;
+  margin-block: 0;
+  font-size: 24px;
+}
+
+.forecast-day {
+  margin: 7.5% 0% 0%;
+  display: flex;
+}
+
+.map {
+  border: 2px solid #010c80;
+  width: 40%;
+  margin: 7.5% 0% 5% 5%;
+}
+
+.temperature-bar {
+  background: linear-gradient(to right, #87cefa, gold);
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  height: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.forecast-day-container {
+  width: 80%;
+  margin: auto;
+}
+
+.forecast-day-temperature {
+  align-items: center;
+  display: flex;
+}
+
+body {
+  text-align: center;
+  background-image: linear-gradient(to left, #87cefa, #fff);
+  justify-content: center;
+  align-items: center;
+  font-family: Unica One Regular;
+  overflow-y: auto;
+}
+
+@font-face {
+  font-family: Unica One Regular;
+  src: url("scyscope-unica-one-regular.9fe19518.ttf") format("woff");
+}
+
+.container {
+  opacity: .9;
+  background-color: #d5edff;
+  border-radius: 25px;
+  flex-wrap: wrap;
+  width: 50%;
+  margin-bottom: 20px;
+  position: sticky;
+  left: 25%;
+  overflow: hidden;
+  box-shadow: 10px 10px 100px #000;
+}
+
+.half-container {
+  background-color: #d5edff;
+  border-radius: 25px;
+  flex-basis: 15%;
+  margin-bottom: 10px;
+  box-shadow: 10px 10px 10px #000;
+}
+
+.full-container {
+  opacity: .7;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 2%;
+  width: 50%;
+  margin-bottom: 20px;
+  display: flex;
+  position: sticky;
+  left: 25%;
+}
+
+.half-container h1 {
+  font-weight: 400;
+}
+
+.half-container h3 {
+  color: #010c80;
+}
+
+.highlight {
+  background-color: #77d4fc;
+}
+
+.spinner {
+  background-color: #f7f9fb;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  transition: opacity .75s, visibility .75s;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.spinner-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.spinner:after {
+  content: "";
+  border: 10px solid #ddd;
+  border-top-color: #77d4fc;
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  animation: .75s infinite loading;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@media (width <= 800px) {
+  .container, .full-container {
+    width: 100%;
+  }
+
+  .half-container {
+    flex-basis: 48.3%;
+  }
+
+  .location-image img {
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+
+  .search-input:focus {
+    width: 150px;
+  }
+
+  .bookmark-modal {
+    width: 90%;
+    left: 5%;
+  }
+}
+
+@media (width <= 1200px) {
+  .map {
+    display: none;
+  }
+
+  .forecast-days {
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+  }
+
+  .location-date h1 {
+    font-size: 1em;
+  }
+}
+
+@media (width <= 1400px) {
+  .half-container {
+    flex-basis: 48.3%;
+  }
+}
+
+
+
+/*# sourceMappingURL=index.46bdac96.css.map */

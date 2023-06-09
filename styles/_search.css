@@ -1,0 +1,36 @@
+.result-container {
+  display: flex;
+  border-top: 2px solid #77d4fc;
+}
+.result {
+  text-align: left;
+  width: 90%;
+  padding: 10px;
+}
+.result-container:hover {
+  background-color: #77d4fc;
+}
+.result h1 {
+  margin-left: 30px;
+  font-size: 20px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  color: #010c80;
+}
+.result h2 {
+  margin-left: 30px;
+  font-size: 15px;
+  padding: 10px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-weight: 100;
+}
+
+.result-bookmark button {
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 1em;
+  font-weight: bold;
+  border: none;
+  padding: 30px;
+}

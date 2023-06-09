@@ -1,0 +1,30 @@
+.location-container {
+  border-bottom-right-radius: 25px;
+  background-color: #d5edff;
+  width: 100%;
+  display: grid;
+  align-items: center;
+}
+
+.location-results {
+  background-color: #77d4fc;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+}
+.location-date {
+  border-bottom-right-radius: 25px;
+}
+
+.location-name {
+  text-align: center;
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+.location-results h1 {
+  padding: 10px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  color: #010c80;
+}

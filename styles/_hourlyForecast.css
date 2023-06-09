@@ -1,0 +1,12 @@
+.hourly-forecast-container::-webkit-scrollbar {
+  display: none;
+}
+
+.hourly-forecast-container {
+  background-color: #87cefa;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+}
