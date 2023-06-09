@@ -1,3 +1,4 @@
+@import "./mobile.css";
 @import "./_base.css";
 @import "./_bookmark.css";
 @import "./_nav.css";
@@ -5,4 +6,4 @@
 @import "./_location.css";
 @import "./_hourlyForecast.css";
 @import "./_forecast.css";
-@import "./mobile.css";
+
