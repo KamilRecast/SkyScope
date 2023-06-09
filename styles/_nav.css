@@ -39,6 +39,11 @@
 
   outline: none;
 }
+@media (width < 1200px) {
+  .search-input:focus {
+    width: 150px;
+  }
+}
 .search-input::placeholder {
   color: #010c80;
 }
