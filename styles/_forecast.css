@@ -7,7 +7,7 @@
   width: 60%;
   padding: 5%;
 }
-@media screen only {
+@media only screen {
   .forecast-days {
     justify-content: center;
     width: 100%;
@@ -32,7 +32,7 @@
 
   border: 2px solid #010c80;
 }
-@media screen only {
+@media only screen {
   .map {
     display: none;
   }
