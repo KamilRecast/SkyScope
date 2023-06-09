@@ -22,7 +22,7 @@ body {
   opacity: 0.9;
   flex-wrap: wrap;
 }
-@media only screen and (max-width: 1200px) {
+@media only screen {
   .container {
     width: 100%;
   }
@@ -59,7 +59,7 @@ body {
   justify-content: center;
   column-gap: 2%;
 }
-@media screen and (max-width: 1200px) {
+@media only screen  {
   .full-container {
     width: 100%;
   }
