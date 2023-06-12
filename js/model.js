@@ -177,14 +177,14 @@ export const handleClick = async function (event, handler) {
   if (!target) return;
   if (target.classList.contains("result")) {
     const data = await resultsArray(target, search);
-    spinnerF();
+    spinner();
     await updateWeather(data.coords, handler);
   }
   if (target.classList.contains("bookmark-result")) {
     const data = await resultsArray(target, bookmarks);
     console.log("target", target);
     console.log("data", data);
-    spinnerF();
+    spinner();
 
     await updateWeather(data.coords, handler);
   }
@@ -232,6 +232,7 @@ export const getPosition = () => {
 };
 export const spinner = () => {
   const spinner = document.querySelector(".spinner");
+  const app = document.querySelector(".app");
 
   spinner.classList.toggle("spinner-hidden");
 };

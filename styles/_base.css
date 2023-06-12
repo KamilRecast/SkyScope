@@ -37,6 +37,7 @@ body {
 }
 .half-container h1 {
   font-weight: 400;
+  font-size: 1.2em;
 }
 .half-container h3 {
   color: #010c80;
@@ -79,6 +80,7 @@ body {
   align-items: center;
   background-color: #f7f9fb;
   transition: opacity 0.75s, visibility 0.75s;
+  z-index: 9999;
 }
 .spinner-hidden {
   opacity: 0;
