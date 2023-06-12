@@ -8,7 +8,12 @@ class BookmarksView extends Weather {
   // Handler - openning bookmarks modal and controlling rendered bookmarks
   addHandlerBookmarks = async (handler, weather) => {
     this._bookmarkButton.addEventListener("click", async () => {
-      handler();
+      await handler();
+      const result = document.querySelector(".bookmark-result");
+      console.log(result);
+      if (result) {
+        this._appContainer.style.opacity = 0.2;
+      }
       this._parentElement.addEventListener("click", (event) => {
         model.handleClick(event, weather);
       });
