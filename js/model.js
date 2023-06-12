@@ -13,18 +13,68 @@ export const weekDays = [
 export let weather = {};
 export let search = [];
 export let bookmarks = [];
+const createHourlyForecastObject = function (weather, currentHour) {
+  const hourlyArray = [];
+  let forecastIndex = 0;
+  let tomorrowFlag = false;
+
+  for (let hourCount = 0; hourlyArray.length < 24; hourCount++) {
+    const forecastday = weather.forecast.forecastday[forecastIndex];
+    const forecastHour = forecastday.hour[hourCount];
+
+    const date = new Date(forecastHour.time);
+    const arrayHour = date.getHours();
+
+    if (!tomorrowFlag) {
+      if (+arrayHour === +currentHour) {
+        hourlyArray.push({
+          hourForecast: "NOW",
+          iconHourForecast: forecastHour.condition.icon,
+          hourTempForecast: forecastHour.temp_c,
+        });
+      }
+      if (+arrayHour > +currentHour) {
+        hourlyArray.push({
+          hourForecast: arrayHour.toString().concat(":", "00"),
+          iconHourForecast: forecastHour.condition.icon,
+          hourTempForecast: forecastHour.temp_c,
+        });
+      }
+    } else {
+      if (+arrayHour < +currentHour) {
+        hourlyArray.push({
+          hourForecast: arrayHour.toString().concat(":", "00"),
+          iconHourForecast: forecastHour.condition.icon,
+          hourTempForecast: forecastHour.temp_c,
+        });
+      }
+    }
+
+    if (hourCount >= forecastday.hour.length - 1) {
+      forecastIndex++;
+      hourCount = -1;
+      tomorrowFlag = true;
+    }
+
+    if (forecastIndex >= weather.forecast.forecastday.length) {
+      break;
+    }
+  }
+
+  console.log(hourlyArray);
+  return hourlyArray;
+};
 
 const createWeatherObject = function (data) {
   const weather = data;
+  console.log(weather);
+  const currentDate = new Date();
+  console.log(currentDate);
+  const currentHour = currentDate.getHours();
 
+  const hourlyForecast = createHourlyForecastObject(weather, currentHour);
   const weeklyForecast = weather.forecast.forecastday.map((day) => {
     const date = new Date(day.date);
-    const currentDate = new Date();
-    console.log(currentDate);
-    const hour = currentDate.getHours();
-    const minute = currentDate.getMinutes();
-    console.log(hour);
-    console.log(minute);
 
     return {
       dayOfTheWeek: weekDays[date.getDay()],
@@ -36,6 +86,7 @@ const createWeatherObject = function (data) {
 
   return {
     date: weather.forecast.forecastday[0].date,
+    currentHour: currentHour,
     name: weather.location.name,
     region: weather.location.region,
     country: weather.location.country,
@@ -61,6 +112,7 @@ const createWeatherObject = function (data) {
     pressure: weather.current.pressure_mb + " hPa",
     visibility: weather.current.vis_km + " km",
     weeklyForecast: weeklyForecast,
+    hourlyForecast: hourlyForecast,
   };
 };
 
