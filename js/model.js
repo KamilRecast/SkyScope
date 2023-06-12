@@ -230,7 +230,7 @@ export const getPosition = () => {
     );
   });
 };
-export const spinnerF = () => {
+export const spinner = () => {
   const spinner = document.querySelector(".spinner");
 
   spinner.classList.toggle("spinner-hidden");

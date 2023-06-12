@@ -32,7 +32,8 @@ const controlWeather = async () => {
 
     // Rendering weather forecast for 3 following days
     daysForecastView.render();
-    model.spinnerF();
+
+    model.spinner();
   } catch (err) {
     console.error(err);
   }
@@ -64,7 +65,6 @@ const controlBookmark = () => {
   bookmarksView.closeModals();
 };
 const init = async function () {
-
   await model.getPosition();
   console.log("START");
 
