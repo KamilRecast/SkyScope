@@ -10,3 +10,6 @@
   -webkit-overflow-scrolling: touch;
   display: flex;
 }
+.weather-data {
+  padding: 2%;
+}
