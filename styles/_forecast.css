@@ -6,6 +6,10 @@
 .forecast-days {
   width: 100%;
   margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
 @media only screen and (min-width: 1200px) {
@@ -23,7 +27,8 @@
 
 .forecast-day {
   display: flex;
-  margin: 7.5% 0% 0% 0%;
+  margin: 3.75% 0% 3.75% 0%;
+  width: 80%;
 }
 .map {
   display: none;
@@ -40,15 +45,16 @@
 .temperature-bar {
   margin-left: 5px;
   margin-right: 5px;
-  width: 90%;
+  width: 100%;
   max-width: 400px;
   border-radius: 10px;
   height: 20px;
   background: linear-gradient(to right, #87cefa, #ffd700);
 }
 .forecast-day-container {
-  width: 80%;
+  width: 70%;
   margin: auto;
+  text-align: center;
 }
 
 .forecast-day-temperature {
