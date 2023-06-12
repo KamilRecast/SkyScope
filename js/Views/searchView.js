@@ -26,12 +26,12 @@ class SearchView extends Weather {
     this._searchInput.blur();
   };
 
-  // Generating HTML code od search results
+  // Generating HTML code of search results
   _generateMarkup = () => {
     if (model.search.length === 0) {
       return `
       <div class="result-container">
-        <div class="result">
+        <div class="result no-results">
           <h1>No results found</h1>
           <h2>Please try again</h2>
         </div>

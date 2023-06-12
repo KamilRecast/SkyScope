@@ -14,9 +14,9 @@ class BookmarksView extends Weather {
       if (result) {
         this._appContainer.style.opacity = 0.2;
       }
-      this._parentElement.addEventListener("click", (event) => {
-        model.handleClick(event, weather);
-      });
+    });
+    this._parentElement.addEventListener("click", (event) => {
+      model.handleClick(event, weather);
     });
   };
 
@@ -25,7 +25,7 @@ class BookmarksView extends Weather {
     if (model.bookmarks.length === 0) {
       return `
       <div class="bookmark-container">
-    <div class="bookmark-result">
+    <div class="bookmark-result no-results">
       <h1>No Bookmarks yet</h1>
       <h2>Search for places and add them to bookmarks</h2>
     </div>
@@ -41,9 +41,9 @@ class BookmarksView extends Weather {
   </div>
   <div class="result-bookmark"><button class="contol-bookmark remove-bookmark" data-lat="${
     value.lat
-  }" data-lon ="${value.lon}" id="${
-            value.lat + value.lon
-          }">REMOVE</button></div>
+  }" data-lon ="${value.lon}" data-coords="${value.lat
+            .toString()
+            .concat(",", value.lon.toString())}">REMOVE</button></div>
   
   </div>`;
         })

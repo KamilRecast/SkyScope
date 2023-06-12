@@ -74,6 +74,8 @@ const init = async function () {
 
   console.log("BOOKMARKS");
   bookmarksView.addHandlerBookmarks(controlBookmark, controlWeather);
+  console.log(`BOOKMARKS OBJECTS ${model.bookmarks}`);
+  console.log(model.bookmarks);
 
   console.log("SEARCH VIEW");
   searchView.addHandlerSearch(controlSearch);

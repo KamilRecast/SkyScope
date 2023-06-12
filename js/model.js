@@ -110,7 +110,10 @@ const isBookmark = (lat, lon) => {
 const resultsArray = async (target, array) => {
   console.log(array);
   const selectedResult = await array.find(
-    (value) => value.name === target.querySelector("h1").textContent.trim()
+    (value) =>
+      value.name === target.querySelector("h1").textContent.trim() &&
+      target.querySelector("h2").textContent.trim().includes(value.country) &&
+      target.querySelector("h2").textContent.trim().includes(value.country)
   );
   console.log(selectedResult);
   return selectedResult;
@@ -170,20 +173,25 @@ export const loadSearchResults = async (searchInput) => {
 };
 
 export const handleClick = async function (event, handler) {
-  const target = event.target.closest(
+  let target = event.target.closest(
     ".result, .add-bookmark, .remove-bookmark, .bookmark-result"
   );
 
   if (!target) return;
-  if (target.classList.contains("result")) {
+  console.log(target);
+  if (
+    target.classList.contains("result") &&
+    !target.classList.contains("no-results")
+  ) {
     const data = await resultsArray(target, search);
     spinner();
     await updateWeather(data.coords, handler);
   }
-  if (target.classList.contains("bookmark-result")) {
+  if (
+    target.classList.contains("bookmark-result") &&
+    !target.classList.contains("no-results")
+  ) {
     const data = await resultsArray(target, bookmarks);
-    console.log("target", target);
-    console.log("data", data);
     spinner();
 
     await updateWeather(data.coords, handler);
@@ -194,14 +202,18 @@ export const handleClick = async function (event, handler) {
         .toString()
         .concat(",", target.dataset.lon.toString());
       const data = await API_CALL(coords, "forecast");
-
+      console.log(data);
       addBookmark(createWeatherObject(data));
     }
   }
   if (target.classList.contains("remove-bookmark")) {
-    const index = bookmarks.findIndex(
-      (el) => +target.dataset.lat === el.lat && +target.dataset.lon === el.lon
-    );
+    console.log(`TARGET ${target}`);
+    let index = bookmarks.findIndex((el) => {
+      console.log(target.dataset.coords);
+      console.log(el.coords);
+      return target.dataset.coords === el.coords;
+    });
+    console.log(index);
     removeBookmark(index);
   }
 };
@@ -232,7 +244,6 @@ export const getPosition = () => {
 };
 export const spinner = () => {
   const spinner = document.querySelector(".spinner");
-  const app = document.querySelector(".app");
 
   spinner.classList.toggle("spinner-hidden");
 };
