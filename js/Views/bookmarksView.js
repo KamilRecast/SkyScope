@@ -26,7 +26,7 @@ class BookmarksView extends Weather {
       <div class="bookmark-container">
     <div class="bookmark-result no-results">
       <h1>No Bookmarks yet</h1>
-      <h2>Search for places and add them to bookmarks</h2>
+      <h2>Search for and add new Bookmarks</h2>
     </div>
     
     </div>`;

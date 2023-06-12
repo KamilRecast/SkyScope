@@ -19,6 +19,12 @@ const createWeatherObject = function (data) {
 
   const weeklyForecast = weather.forecast.forecastday.map((day) => {
     const date = new Date(day.date);
+    const currentDate = new Date();
+    console.log(currentDate);
+    const hour = currentDate.getHours();
+    const minute = currentDate.getMinutes();
+    console.log(hour);
+    console.log(minute);
 
     return {
       dayOfTheWeek: weekDays[date.getDay()],
@@ -153,6 +159,7 @@ const renderMap = (lat, long) => {
 export const updateWeather = async function (coords, handler = undefined) {
   try {
     const data = await API_CALL(coords, "forecast");
+    console.log(data);
     weather = createWeatherObject(data);
     renderMap(weather.lat, weather.lon);
     if (handler) handler();
