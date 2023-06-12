@@ -13,7 +13,7 @@ body {
 .container {
   left: 25%;
   margin-bottom: 20px;
-  width: 50%;
+  width: 100%;
   position: sticky;
   overflow: hidden;
   background-color: #d5edff;
@@ -22,9 +22,9 @@ body {
   opacity: 0.9;
   flex-wrap: wrap;
 }
-@media only screen {
+@media only screen and (min-width: 1200px) {
   .container {
-    width: 100%;
+    width: 50%;
   }
 }
 .half-container {
@@ -33,8 +33,7 @@ body {
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 2);
   background-color: #d5edff;
   border-radius: 25px;
-
-  flex-basis: calc(16.7% - 1.7%);
+  flex-basis: calc(50% - 1.7%);
 }
 .half-container h1 {
   font-weight: 400;
@@ -42,9 +41,9 @@ body {
 .half-container h3 {
   color: #010c80;
 }
-@media only screen{
+@media only screen and (min-width: 1200px) {
   .half-container {
-    flex-basis: calc(50% - 1.7%);
+    flex-basis: calc(16.7% - 1.7%);
   }
 }
 .full-container {
@@ -52,16 +51,16 @@ body {
 
   margin-bottom: 20px;
   position: sticky;
-  width: 50%;
+  width: 100%;
   left: 25%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   column-gap: 2%;
 }
-@media only screen  {
+@media only screen and (min-width: 1200px) {
   .full-container {
-    width: 100%;
+    width: 50%;
   }
 }
 

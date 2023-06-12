@@ -4,14 +4,14 @@
 }
 
 .forecast-days {
-  width: 60%;
-  padding: 5%;
+  width: 100%;
+  margin: auto;
+  justify-content: center;
 }
-@media only screen {
+@media only screen and (min-width: 1200px) {
   .forecast-days {
-    justify-content: center;
-    width: 100%;
-    margin: auto;
+    width: 60%;
+    padding: 5%;
   }
 }
 .forecast p {
@@ -26,15 +26,15 @@
   margin: 7.5% 0% 0% 0%;
 }
 .map {
-  margin: 7.5% 0% 5% 5%;
-
-  width: 40%;
-
-  border: 2px solid #010c80;
+  display: none;
 }
-@media only screen {
+@media only screen and (min-width: 1200px) {
   .map {
-    display: none;
+    margin: 7.5% 0% 5% 5%;
+
+    width: 40%;
+
+    border: 2px solid #010c80;
   }
 }
 .temperature-bar {

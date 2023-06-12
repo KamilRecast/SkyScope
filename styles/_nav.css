@@ -34,14 +34,14 @@
   transition: width 0.3s ease-in-out;
 }
 .search-input:focus {
-  width: 250px;
+  width: 100px;
   border-bottom: 2px solid #010c80;
 
   outline: none;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .search-input:focus {
-    width: 150px;
+    width: 250px;
   }
 }
 .search-input::placeholder {

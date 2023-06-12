@@ -15,14 +15,13 @@
 .location-date {
   border-bottom-right-radius: 25px;
 }
-@media screen and (max-width: 1200px) {
-  .location-date h1 {
-    font-size: 1em;
-  }
-  .location-image img {
-    border-bottom-right-radius: 25px;
-    border-top-left-radius: 25px;
-  }
+
+.location-date h1 {
+  font-size: 1em;
+}
+.location-image img {
+  border-bottom-right-radius: 25px;
+  border-top-left-radius: 25px;
 }
 
 .location-name {
