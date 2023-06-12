@@ -23,7 +23,7 @@
 }
 
 .search-input {
-  position: relative;
+  position: absolute;
   width: 0;
   height: 35px;
   right: 45px;
