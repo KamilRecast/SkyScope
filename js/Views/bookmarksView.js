@@ -10,7 +10,6 @@ class BookmarksView extends Weather {
     this._bookmarkButton.addEventListener("click", async () => {
       await handler();
       const result = document.querySelector(".bookmark-result");
-      console.log(result);
       if (result) {
         this._appContainer.style.opacity = 0.2;
       }

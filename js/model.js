@@ -60,7 +60,6 @@ const createWeatherObject = function (data) {
 
 const createSearchArray = function (data) {
   const search = data;
-  console.log(search);
   return search.map((value) => {
     return {
       country: value.country,
@@ -108,14 +107,12 @@ const isBookmark = (lat, lon) => {
 };
 
 const resultsArray = async (target, array) => {
-  console.log(array);
   const selectedResult = await array.find(
     (value) =>
       value.name === target.querySelector("h1").textContent.trim() &&
       target.querySelector("h2").textContent.trim().includes(value.country) &&
       target.querySelector("h2").textContent.trim().includes(value.country)
   );
-  console.log(selectedResult);
   return selectedResult;
 };
 
@@ -158,7 +155,6 @@ export const updateWeather = async function (coords, handler = undefined) {
     const data = await API_CALL(coords, "forecast");
     weather = createWeatherObject(data);
     renderMap(weather.lat, weather.lon);
-    console.log(weather);
     if (handler) handler();
   } catch (err) {
     throw err;
@@ -168,7 +164,6 @@ export const updateWeather = async function (coords, handler = undefined) {
 export const loadSearchResults = async (searchInput) => {
   const data = await API_CALL(searchInput, "search");
   search = createSearchArray(data);
-  console.log(search);
   return data;
 };
 
@@ -178,7 +173,6 @@ export const handleClick = async function (event, handler) {
   );
 
   if (!target) return;
-  console.log(target);
   if (
     target.classList.contains("result") &&
     !target.classList.contains("no-results")
@@ -202,18 +196,13 @@ export const handleClick = async function (event, handler) {
         .toString()
         .concat(",", target.dataset.lon.toString());
       const data = await API_CALL(coords, "forecast");
-      console.log(data);
       addBookmark(createWeatherObject(data));
     }
   }
   if (target.classList.contains("remove-bookmark")) {
-    console.log(`TARGET ${target}`);
     let index = bookmarks.findIndex((el) => {
-      console.log(target.dataset.coords);
-      console.log(el.coords);
       return target.dataset.coords === el.coords;
     });
-    console.log(index);
     removeBookmark(index);
   }
 };
@@ -236,7 +225,7 @@ export const getPosition = () => {
       (position) => {
         userLocation(position).then(resolve).catch(reject);
       },
-      (error) => {
+      () => {
         blockedLocation().then(resolve).catch(reject);
       }
     );

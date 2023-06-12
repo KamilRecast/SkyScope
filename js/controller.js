@@ -66,21 +66,14 @@ const controlBookmark = () => {
 };
 const init = async function () {
   await model.getPosition();
-  console.log("START");
 
   // Render current weather for current location
-  console.log("CONTROL WEATHER");
   await controlWeather();
 
-  console.log("BOOKMARKS");
   bookmarksView.addHandlerBookmarks(controlBookmark, controlWeather);
-  console.log(`BOOKMARKS OBJECTS ${model.bookmarks}`);
-  console.log(model.bookmarks);
 
-  console.log("SEARCH VIEW");
   searchView.addHandlerSearch(controlSearch);
 
-  console.log("SEARCH RESULTS");
   searchResultsView.addHandlerSearchResult(controlWeather);
 };
 
