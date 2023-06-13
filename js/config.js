@@ -1,4 +1,5 @@
 export const API = "f69871db34ac42019b8170127231205";
+export const DEFAULT_COORDS = "51.509865, -0.118092";
 
 // API template
 export const API_CALL = async (input, call) => {
