@@ -10,9 +10,19 @@ class DaysForecastView extends Weather {
       .map((day) => {
         return `
     <div class="forecast-day">
-    <img src="${day.image}"/>
+    <img src="${day.image}"/> 
     <div class="forecast-day-container">
-    <div><p>${day.dayOfTheWeek}</p></div><div class="forecast-day-temperature">${day.minTemp}℃ <div class="temperature-bar"></div>${day.maxTemp}℃</div></div></div>
+    
+    <div><p>${
+      day.dayOfTheWeek
+    }</p></div><div class="forecast-day-temperature"><p>${
+          day.minTemp
+        }℃</p> <div class="temperature-bar"></div><p>${day.maxTemp}℃</p>
+    </div><p>${
+      day.chanceOfRain > 0
+        ? `<i class="fa-solid fa-droplet fa-2xs"></i> ${day.chanceOfRain} % </p>`
+        : ""
+    }</div></div>
   `;
       })
       .join("");

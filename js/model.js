@@ -31,6 +31,7 @@ const createHourlyForecastObject = function (weather, currentHour) {
           hourForecast: "NOW",
           iconHourForecast: forecastHour.condition.icon,
           hourTempForecast: forecastHour.temp_c,
+          hourChanceOfRain: forecastHour.chance_of_rain,
         });
       }
       if (+arrayHour > +currentHour) {
@@ -38,6 +39,7 @@ const createHourlyForecastObject = function (weather, currentHour) {
           hourForecast: arrayHour.toString().concat(":", "00"),
           iconHourForecast: forecastHour.condition.icon,
           hourTempForecast: forecastHour.temp_c,
+          hourChanceOfRain: forecastHour.chance_of_rain,
         });
       }
     } else {
@@ -46,6 +48,7 @@ const createHourlyForecastObject = function (weather, currentHour) {
           hourForecast: arrayHour.toString().concat(":", "00"),
           iconHourForecast: forecastHour.condition.icon,
           hourTempForecast: forecastHour.temp_c,
+          hourChanceOfRain: forecastHour.chance_of_rain,
         });
       }
     }
@@ -81,6 +84,7 @@ const createWeatherObject = function (data) {
       image: day.day.condition.icon,
       minTemp: day.day.mintemp_c,
       maxTemp: day.day.maxtemp_c,
+      chanceOfRain: day.day.daily_chance_of_rain,
     };
   });
 

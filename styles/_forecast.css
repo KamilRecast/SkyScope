@@ -15,7 +15,6 @@
 @media only screen and (min-width: 1200px) {
   .forecast-days {
     width: 60%;
-    padding: 5%;
   }
 }
 .forecast p {
@@ -35,23 +34,28 @@
 }
 @media only screen and (min-width: 1200px) {
   .map {
-    margin: 7.5% 0% 5% 5%;
-
+    margin: auto;
+    margin-left: 5%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
     width: 40%;
     display: block;
   }
 }
+
 .temperature-bar {
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 0; /* Zmień na 0 */
+  margin-right: 0; /* Zmień na 0 */
   width: 100%;
   max-width: 400px;
   border-radius: 10px;
   height: 20px;
   background: linear-gradient(to right, #87cefa, #ffd700);
 }
+
 .forecast-day-container {
-  width: 70%;
+  width: 100%;
   margin: auto;
   text-align: center;
 }
@@ -59,4 +63,18 @@
 .forecast-day-temperature {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+.forecast-day-temperature p {
+  width: 100px;
+  font-size: 1em;
+  text-align: right;
+  padding: 5px;
+}
+
+.forecast-day-container p {
+  text-align: left;
+
+  font-size: 1em;
 }

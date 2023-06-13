@@ -36,8 +36,9 @@ body {
   flex-basis: calc(50% - 1.7%);
 }
 .half-container h1 {
-  font-weight: 400;
+  font-weight: 900;
   font-size: 1.2em;
+  color: #ff7852;
 }
 .half-container h3 {
   color: #010c80;
