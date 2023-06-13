@@ -1,5 +1,5 @@
 .nav {
-  height: 100px;
+  height: 80px;
   display: grid;
   grid-template-columns: 1fr 2fr;
 }
@@ -7,10 +7,10 @@
   display: flex;
 }
 .nav-logo {
-  height: 50px;
+  height: 30px;
   width: 100%;
   margin-left: 10px;
-  margin-top: 10px;
+  margin-top: 25px;
   background-image: url("../img/logo.png");
   background-size: contain;
   background-repeat: no-repeat;
