@@ -1,9 +1,11 @@
 .alert-modal {
+  position: absolute;
   top: 5%;
   left: 5%;
   width: 90%;
   background-color: #ff7852;
   border-radius: 25px;
+  animation: openModal 0.3s ease;
 }
 .alert-modal button {
   font-size: 2em;
