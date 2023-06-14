@@ -141,9 +141,9 @@ const createWeatherObject = function (data) {
   // Setting up object values
   return {
     date: weather.forecast.forecastday[0].date,
-    // alerts: weather.alerts.alert,
+    alerts: weather.alerts.alert,
     alertIndex: 0,
-    alerts: alerts,
+    // alerts: alerts,
     currentHour: currentHour,
     name: weather.location.name,
     region: weather.location.region,
