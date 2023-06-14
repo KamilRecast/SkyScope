@@ -4,7 +4,7 @@ export const DEFAULT_COORDS = "51.509865, -0.118092";
 // API template
 export const API_CALL = async (input, call) => {
   const response = await fetch(
-    `https://api.weatherapi.com/v1/${call}.json?key=${API}&q=${input}&days=3`,
+    `https://api.weatherapi.com/v1/${call}.json?key=${API}&q=${input}&days=3&alerts=yes`,
     {
       method: "GET",
       headers: {

@@ -7,7 +7,11 @@ class LocationView extends Weather {
   // Returning HTML code of location name and current temperature
   _generateMarkup() {
     return `<div><h1>${model.weather.name}</h1></div>
-    <div><h1>${model.weather.temp}</h1></div>`;
+    <div><h1>${model.weather.temp}    ${
+      model.weather.alerts.length > 0
+        ? `<i class="fa-solid fa-triangle-exclamation alert" id="alert-to-open" style="color: #fa0000;"></i></i>`
+        : ""
+    }</h1></div>`;
   }
 }
 

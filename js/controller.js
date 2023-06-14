@@ -8,6 +8,7 @@ import locationView from "./Views/locationView.js";
 import dateView from "./Views/dateView.js";
 import conditionsTopView from "./Views/conditionsTopView.js";
 import conditionsBottomView from "./Views/conditionsBottomView.js";
+import alertView from "./Views/alertView.js";
 import * as model from "./model.js";
 
 const controlWeather = async () => {
@@ -34,6 +35,7 @@ const controlWeather = async () => {
     daysForecastView.render();
 
     model.spinner();
+    alertView.alert();
   } catch (err) {
     console.error(err);
   }

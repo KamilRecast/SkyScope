@@ -1,0 +1,107 @@
+.alert-modal {
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  background-color: #ff7852;
+  border-radius: 25px;
+}
+.alert-modal button {
+  font-size: 2em;
+  position: absolute;
+  right: 2%;
+  top: 1%;
+  border: none;
+  background-color: transparent;
+  color: #77d4fc;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.alert-agency h1 {
+  color: #010c80;
+  font-size: 1.75em;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+.alert-description h1 {
+  font-size: 1.25em;
+  color: #d5edff;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+.alert-content {
+  margin: 5% 0% 5% 0%;
+  font-size: 0.75em;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+.alert-content i {
+  margin-top: 5%;
+  font-size: 6em;
+}
+.alert-content h1 {
+  color: #d5edff;
+  font-size: 4em;
+}
+.alert-short h1 {
+  font-size: 2em;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev {
+  left: 0;
+}
+
+.prev:hover,
+.next:hover {
+  color: #77d4fc;
+}
+
+@keyframes openModal {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .alert-modal {
+    position: absolute;
+    left: 30%;
+    width: 40%;
+    top: 5%;
+  }
+  .alert-title h1,
+  .alert-icon h1 {
+    position: absolute;
+    color: #d5edff;
+    margin-right: 5px;
+  }
+}

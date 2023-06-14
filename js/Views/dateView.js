@@ -6,6 +6,7 @@ class DateView extends Weather {
 
   // Returning HTML code of the location date
   _generateMarkup() {
+    console.log(model.weather.alerts);
     return `<h1>${model.weather.date}</h1>`;
   }
 }

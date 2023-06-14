@@ -17,8 +17,9 @@
 }
 
 .location-date h1 {
-  font-size: 1em;
+  font-size: 1.25em;
 }
+
 .location-image img {
   border-bottom-right-radius: 25px;
   border-top-left-radius: 25px;
@@ -31,8 +32,10 @@
   align-items: center;
 }
 
-.location-name h1 {
-  font-size: 1.5em;
+.location-name h1,
+i {
+  font-size: 1.75em;
+  margin-bottom: 20px;
 }
 .location-results h1 {
   padding: 10px;
