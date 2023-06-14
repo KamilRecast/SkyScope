@@ -10,8 +10,8 @@
 .alert-modal button {
   font-size: 2em;
   position: absolute;
-  right: 1%;
-  top: 1%;
+  right: 0.5%;
+  top: 0.5%;
   border: none;
   background-color: transparent;
   color: #77d4fc;
